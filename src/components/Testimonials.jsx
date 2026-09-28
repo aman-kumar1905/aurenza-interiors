@@ -13,6 +13,7 @@ export default function Testimonials() {
         ref={ref}
         className={`max-w-4xl mx-auto text-center reveal ${isInView ? 'is-visible' : ''}`}
       >
+        <h2 className="sr-only">Client Testimonials</h2>
         <p className="font-serif text-2xl md:text-4xl leading-[1.4] italic">
           &ldquo;{testimonial.quote}&rdquo;
         </p>
@@ -21,17 +22,22 @@ export default function Testimonials() {
         </p>
 
         {testimonials.length > 1 && (
-          <div className="flex justify-center gap-3 mt-10">
+          <div className="flex justify-center gap-1 mt-10">
             {testimonials.map((t, i) => (
               <button
                 key={t.id}
                 type="button"
                 aria-label={`Show testimonial ${i + 1}`}
+                aria-pressed={i === index}
                 onClick={() => setIndex(i)}
-                className={`h-1.5 w-6 transition-colors duration-300 ${
-                  i === index ? 'bg-champagne' : 'bg-ivory/30'
-                }`}
-              />
+                className="p-3"
+              >
+                <span
+                  className={`block h-1.5 w-6 transition-colors duration-300 ${
+                    i === index ? 'bg-champagne' : 'bg-ivory/30'
+                  }`}
+                />
+              </button>
             ))}
           </div>
         )}

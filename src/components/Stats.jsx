@@ -6,6 +6,7 @@ export default function Stats() {
 
   return (
     <section className="bg-sand py-16 md:py-20 px-6 md:px-12">
+      <h2 className="sr-only">Studio at a Glance</h2>
       <div
         ref={ref}
         className={`max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 text-center reveal ${
