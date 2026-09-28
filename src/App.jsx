@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import Intro from './components/Intro'
 import FeaturedProjects from './components/FeaturedProjects'
 import Services from './components/Services'
+import DesignPhilosophy from './components/DesignPhilosophy'
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Intro />
         <FeaturedProjects />
         <Services />
+        <DesignPhilosophy />
       </main>
     </>
   )
