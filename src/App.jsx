@@ -5,6 +5,7 @@ import FeaturedProjects from './components/FeaturedProjects'
 import Services from './components/Services'
 import DesignPhilosophy from './components/DesignPhilosophy'
 import Stats from './components/Stats'
+import ProcessStory from './components/ProcessStory'
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Services />
         <DesignPhilosophy />
         <Stats />
+        <ProcessStory />
       </main>
     </>
   )
