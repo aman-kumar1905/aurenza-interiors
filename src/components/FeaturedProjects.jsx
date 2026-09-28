@@ -10,17 +10,15 @@ function ProjectCard({ project }) {
       : project.layout === 'tall'
       ? 'md:row-span-2'
       : ''
-  const aspectClass = project.layout === 'tall' ? 'aspect-[3/4]' : 'aspect-[16/10]'
+  const imageBoxClass = project.layout === 'tall' ? 'h-full' : 'aspect-[16/10]'
 
   return (
     <div
       ref={ref}
-      className={`group relative overflow-hidden reveal ${spanClass} ${
-        isInView ? 'is-visible' : ''
-      }`}
+      className={`group relative reveal ${spanClass} ${isInView ? 'is-visible' : ''}`}
     >
       <div
-        className={`${aspectClass} overflow-hidden ${
+        className={`${imageBoxClass} overflow-hidden ${
           project.secondaryImage ? 'grid grid-cols-[2fr_1fr] gap-1' : ''
         }`}
       >
@@ -43,18 +41,19 @@ function ProjectCard({ project }) {
           />
         )}
       </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent" />
-      <div className="absolute bottom-0 left-0 p-6 md:p-8 text-ivory">
-        <p className="text-xs tracking-[0.25em] uppercase font-sans opacity-0 group-hover:opacity-100 transition-opacity duration-300 mb-2">
+      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-ivory">
+        <p className="text-xs tracking-[0.25em] uppercase font-sans mb-2 line-clamp-1">
           {project.category}
         </p>
         <div className="flex items-center gap-3">
-          <h3 className="font-serif text-2xl md:text-3xl transition-transform duration-300 group-hover:-translate-y-1">
+          <h3 className="font-serif text-2xl md:text-3xl leading-tight line-clamp-2 transition-transform duration-300 group-hover:-translate-y-1">
             {project.title}
           </h3>
           <ArrowUpRight
-            className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+            className="shrink-0 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
             size={22}
+            aria-hidden="true"
           />
         </div>
       </div>
