@@ -7,6 +7,7 @@ import DesignPhilosophy from './components/DesignPhilosophy'
 import Stats from './components/Stats'
 import ProcessStory from './components/ProcessStory'
 import Materials from './components/Materials'
+import Process from './components/Process'
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <Stats />
         <ProcessStory />
         <Materials />
+        <Process />
       </main>
     </>
   )
