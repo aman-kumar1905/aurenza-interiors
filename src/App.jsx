@@ -8,6 +8,10 @@ import Stats from './components/Stats'
 import ProcessStory from './components/ProcessStory'
 import Materials from './components/Materials'
 import Process from './components/Process'
+import Testimonials from './components/Testimonials'
+import About from './components/About'
+import CTA from './components/CTA'
+import Footer from './components/Footer'
 
 export default function App() {
   return (
@@ -23,7 +27,11 @@ export default function App() {
         <ProcessStory />
         <Materials />
         <Process />
+        <Testimonials />
+        <About />
       </main>
+      <CTA />
+      <Footer />
     </>
   )
 }
