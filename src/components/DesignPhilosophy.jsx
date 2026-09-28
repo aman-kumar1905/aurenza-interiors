@@ -25,8 +25,8 @@ export default function DesignPhilosophy() {
           <img
             src={philosophyImage}
             alt="Natural wood and stone materials in a minimalist interior"
-            width={1400}
-            height={1750}
+            width={2000}
+            height={1333}
             loading="lazy"
             className="w-full h-auto object-cover"
           />

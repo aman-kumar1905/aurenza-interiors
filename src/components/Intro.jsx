@@ -32,8 +32,8 @@ export default function Intro() {
           <img
             src={introImage}
             alt="Minimalist staircase interior with natural light"
-            width={1400}
-            height={1750}
+            width={2000}
+            height={3000}
             loading="lazy"
             className="w-full h-auto object-cover"
           />

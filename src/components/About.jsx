@@ -16,8 +16,8 @@ export default function About() {
           <img
             src={aboutImage}
             alt="AURENZA INTERIORS design studio workspace"
-            width={1400}
-            height={1750}
+            width={2000}
+            height={2667}
             loading="lazy"
             className="w-full h-auto object-cover"
           />

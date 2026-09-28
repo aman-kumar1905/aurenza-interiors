@@ -19,7 +19,11 @@ function ProjectCard({ project }) {
         isInView ? 'is-visible' : ''
       }`}
     >
-      <div className={`${aspectClass} overflow-hidden`}>
+      <div
+        className={`${aspectClass} overflow-hidden ${
+          project.secondaryImage ? 'grid grid-cols-[2fr_1fr] gap-1' : ''
+        }`}
+      >
         <img
           src={project.image}
           alt={`${project.title} — ${project.category}`}
@@ -28,6 +32,16 @@ function ProjectCard({ project }) {
           loading="lazy"
           className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
         />
+        {project.secondaryImage && (
+          <img
+            src={project.secondaryImage}
+            alt={`${project.title} detail`}
+            width={800}
+            height={1000}
+            loading="lazy"
+            className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+          />
+        )}
       </div>
       <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent" />
       <div className="absolute bottom-0 left-0 p-6 md:p-8 text-ivory">
