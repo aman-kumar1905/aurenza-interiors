@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 export function useScrollY() {
-  const [scrollY, setScrollY] = useState(0)
+  const [scrollY, setScrollY] = useState(() => window.scrollY)
   const ticking = useRef(false)
 
   useEffect(() => {
