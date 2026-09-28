@@ -6,7 +6,7 @@ export default function Hero() {
   const scrollY = useScrollY()
 
   return (
-    <section id="top" className="relative h-screen min-h-[640px] overflow-hidden">
+    <section id="top" className="relative h-[100svh] min-h-[640px] overflow-hidden">
       <div
         className="parallax-layer absolute inset-0"
         style={{ transform: `translateY(${scrollY * 0.15}px) scale(1.1)` }}
